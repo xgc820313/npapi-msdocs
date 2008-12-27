@@ -4,10 +4,10 @@
 = Installation steps =
 
 If you want to commit or just modify this plugin for your needs, you need a development environment using following steps:
-# Create a work folder (C:\work\npmsdocs for example)
-# Check out mozilla sources into C:\work\npmsdocs\mozilla
-# Check out XUL runner SDK into C:\work\npmsdocs\xulrunner-sdk
-# Check out project code into C:\work\npmsdocs\msoffice-open
-# Open solution using Visual Studio 2008 in C:\work\npmsdocs\msoffice-open\npmsdocs.sln 
+  # Create a work folder (C:\work\npmsdocs for example)
+  # Check out mozilla sources into C:\work\npmsdocs\mozilla
+  # Check out XUL runner SDK into C:\work\npmsdocs\xulrunner-sdk
+  # Check out project code into C:\work\npmsdocs\msoffice-open
+  # Open solution using Visual Studio 2008 in C:\work\npmsdocs\msoffice-open\npmsdocs.sln 
 
 Beware: Debug cofiguration copies Debug\npmsdocs.dll into C:\Program Files\Mozilla Firefox\plugins
