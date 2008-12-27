@@ -84,7 +84,7 @@
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories="&quot;$(WindowsSdkDir)\lib&quot;;&quot;$(VCInstallDir)\lib&quot;;&quot;$(VCInstallDir)\atlmfc\lib&quot;"
-				ModuleDefinitionFile=".\basic.def"
+				ModuleDefinitionFile=".\npmsdocs.def"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Debug/npbasic.pdb"
 				RandomizedBaseAddress="1"
@@ -183,7 +183,7 @@
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories="&quot;$(WindowsSdkDir)\lib&quot;;&quot;$(VCInstallDir)\lib&quot;;&quot;$(VCInstallDir)\atlmfc\lib&quot;"
-				ModuleDefinitionFile=".\basic.def"
+				ModuleDefinitionFile=".\npmsdocs.def"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Release/npbasic.pdb"
 				RandomizedBaseAddress="1"
@@ -224,11 +224,11 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="basic.def"
+				RelativePath=".\np_entry.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\np_entry.cpp"
+				RelativePath=".\npmsdocs.def"
 				>
 			</File>
 			<File
