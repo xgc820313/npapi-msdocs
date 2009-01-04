@@ -182,8 +182,8 @@ NPError nsPluginInstance::NewStream(NPMIMEType type, NPStream* stream,
 {
 	USES_CONVERSION;
 
-	LPSTR url = new char[strlen(stream->url)];
-	url_decode(stream->url, stream->url + strlen(stream->url), url, url+strlen(stream->url));
+	LPSTR url = new char[strlen(stream->url)+1];
+	url_decode(stream->url, stream->url + strlen(stream->url), url, url+strlen(stream->url)+1);
 	int bufsize = ::MultiByteToWideChar(CP_UTF8, 0, url, strlen(url), NULL, 0);
 	LPWSTR urlw = new WCHAR[bufsize];
 	int i = ::MultiByteToWideChar(CP_UTF8, 0, url, strlen(url), urlw, bufsize);
@@ -193,14 +193,14 @@ NPError nsPluginInstance::NewStream(NPMIMEType type, NPStream* stream,
 	HRESULT _hr = S_OK;
 	CLSID _clsid;
 
-	_hr = ::GetClassFileOrMime(NULL,		// LPBC pBC,
-						urlw,		// LPCWSTR szFilename,
-						NULL,		// LPVOID pBuffer,
-						0,			// DWORD cbSize,
-						A2W(type),	// LPCWSTR szMime,
-						0,			// DWORD dwReserved,
-						&_clsid		//CLSID *pclsid
-						);
+	//_hr = ::GetClassFileOrMime(NULL,		// LPBC pBC,
+	//					urlw,		// LPCWSTR szFilename,
+	//					NULL,		// LPVOID pBuffer,
+	//					0,			// DWORD cbSize,
+	//					A2W(type),	// LPCWSTR szMime,
+	//					0,			// DWORD dwReserved,
+	//					&_clsid		//CLSID *pclsid
+	//					);
 
 	//CComPtr<IMoniker> _moniker;
 	//_hr = ::CreateClassMoniker(_clsid, &_moniker);
